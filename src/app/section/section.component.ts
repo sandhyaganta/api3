@@ -9,12 +9,14 @@ import { ApiService } from '../api.service';
 })
 
   export class ViewDataComponent implements OnInit {
+    apiData: any;
 
     constructor(private apiService: ApiService){}
   
     ngOnInit() {
       this.apiService.getData().subscribe((res: any) => {
-        console.log(res);
+        this.apiData = res.data
+        console.log(this.apiData);
       });
     }
 
