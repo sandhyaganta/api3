@@ -1,10 +1,18 @@
-import { Component } from '@angular/core';
+
+import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-section',
   templateUrl: './section.component.html',
   styleUrls: ['./section.component.css']
 })
-export class SectionComponent {
+
+  export class ViewDataComponent implements OnInit {
+
+    constructor(private apiService: ApiService){}
+  
+    ngOnInit(): void {
+    }
 
 }
