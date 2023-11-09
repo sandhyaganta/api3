@@ -12,7 +12,10 @@ import { ApiService } from '../api.service';
 
     constructor(private apiService: ApiService){}
   
-    ngOnInit(): void {
+    ngOnInit() {
+      this.apiService.getData().subscribe((res: any) => {
+        console.log(res);
+      });
     }
 
 }
